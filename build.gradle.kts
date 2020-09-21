@@ -26,10 +26,16 @@ dependencies {
     implementation(kotlin("stdlib-jdk8"))
 
     implementation("com.kohlschutter.junixsocket:junixsocket-core:2.3.2")
+    implementation("net.java.dev.jna:jna-platform:5.5.0")
+
+    implementation("com.squareup.wire:wire-runtime:3.3.0")
+    implementation("com.squareup.wire:wire-grpc-client:3.3.0")
+    implementation("com.squareup.okhttp3:okhttp:4.9.0")
 }
 
 wire {
     kotlin {
+        out = "src/main/kotlin"
         rpcRole = "client"
     }
 }
